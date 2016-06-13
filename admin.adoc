@@ -167,6 +167,14 @@ Labels: user
 Password: set
 --------------------------------------------------------------------------------
 
+To delete a user
+[source,shell]
+--------------------------------------------------------------------------------
+db@host:~$ sudo grr_config_updater delete_user joe
+Using configuration <ConfigFileParser filename="/etc/grr/grr-server.conf">
+User joe has been deleted
+--------------------------------------------------------------------------------
+
 Security Managers.
 ~~~~~~~~~~~~~~~~~~
 
