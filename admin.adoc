@@ -139,6 +139,7 @@ Password: set
 --------------------------------------------------------------------------------
 
 To update a user (useful for setting labels or for changing passwords):
+[source,shell]
 --------------------------------------------------------------------------------
 db@host:~$ sudo grr_config_updater update_user joe --add_labels admin,user
 Using configuration <ConfigFileParser filename="/etc/grr/grr-server.conf">
@@ -146,6 +147,23 @@ Updating user joe
 
 Username: joe
 Labels: admin,user
+Password: set
+
+db@host:~$ sudo grr_config_updater update_user joe --delete_labels admin
+Using configuration <ConfigFileParser filename="/etc/grr/grr-server.conf">
+Updating user joe
+
+Username: joe
+Labels: user
+Password: set
+
+db@host:~$ sudo grr_config_updater update_user joe --password
+Using configuration <ConfigFileParser filename="/etc/grr/grr-server.conf">
+Please enter password for user 'joe':
+Updating user joe
+
+Username: joe
+Labels: user
 Password: set
 --------------------------------------------------------------------------------
 
